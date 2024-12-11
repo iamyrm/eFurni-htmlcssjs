@@ -1,0 +1,133 @@
+@import url('./fonts.css');
+
+:root {
+  --color-primary: #3B5D50;
+  --color-secondary: #2e493e;
+  --color-tertiary: #F9BF29;
+  --color-primary-bg: #EFF2F1;
+  --color-black: #2F2F2F;
+  --color-white: #fff;
+  --color-lightgreen: #CBD5D1;
+  --color-content: rgb(106, 106, 106);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Arial, Helvetica, sans-serif';
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+a:hover {
+  color: var(--color-content);
+  transition-duration: 0.2s;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.f-s-14 {
+  font-size: 14px;
+}
+
+.primary-color {
+  color: var(--color-primary);
+}
+
+.primary-bg {
+  background-color: var(--color-primary-bg);
+}
+
+.secondary-bg {
+  background-color: var(--color-white);
+}
+
+.para-content {
+  color: var(--color-content);
+}
+
+.black-color {
+  color: var(--color-black);
+}
+
+.social-icon-container {
+  background-color: var(--color-lightgreen);
+  border-radius: 50%;
+  height: 30px;
+  aspect-ratio: 1;
+
+  &:hover {
+    background-color: var(--color-primary);
+    transition-duration: 0.2s;
+
+    .social-icons {
+      color: var(--color-lightgreen);
+    }
+  }
+}
+
+.social-icons {
+  color: var(--color-primary);
+}
+
+.img-hover:hover {
+  transform: scale(1.01);
+  transition-duration: 0.3s;
+}
+
+/* -------------------Recent Blogs CSS Start------------------- */
+
+.blog-posts {
+  margin-bottom: 5rem;
+}
+
+/* -------------------Recent Blogs CSS End------------------- */
+
+/* -------------------Footer CSS Start------------------- */
+
+.input-form input {
+  border: 0.5px solid var(--color-content);
+}
+
+.footer-newsletter button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-secondary);
+    transition-duration: 0.2s;
+  }
+}
+
+.footer-section-img img {
+  bottom: -35%;
+}
+
+/* -------------------Footer CSS End------------------- */
+
+/* -------------------Media Query CSS------------------- */
+
+/* For small devices */
+@media (max-width:575.99px) {}
+
+/* For medium devices */
+@media (min-width:576px) and (max-width:991.98px) {
+  .footer-section-img img {
+    bottom: 20%;
+  }
+}
+
+/* For Large devices */
+@media (min-width:992px) {}
