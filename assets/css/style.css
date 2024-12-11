@@ -1,4 +1,5 @@
 @import url('./fonts.css');
+@import url('./swiperjs.css');
 
 :root {
   --color-primary: #3B5D50;
@@ -42,6 +43,14 @@ img {
   font-size: 14px;
 }
 
+.f-s-16 {
+  font-size: 16px;
+}
+
+.f-s-18 {
+  font-size: 18px;
+}
+
 .primary-color {
   color: var(--color-primary);
 }
@@ -62,11 +71,15 @@ img {
   color: var(--color-black);
 }
 
+.default-padding {
+  padding: 3rem 0;
+}
+
 .social-icon-container {
   background-color: var(--color-lightgreen);
   border-radius: 50%;
-  height: 30px;
-  aspect-ratio: 1;
+  height: 35px;
+  width: 35px;
 
   &:hover {
     background-color: var(--color-primary);
@@ -87,13 +100,13 @@ img {
   transition-duration: 0.3s;
 }
 
-/* -------------------Recent Blogs CSS Start------------------- */
+/* -------------------Main Content CSS Start------------------- */
 
 .blog-posts {
   margin-bottom: 5rem;
 }
 
-/* -------------------Recent Blogs CSS End------------------- */
+/* -------------------Main Content CSS End------------------- */
 
 /* -------------------Footer CSS Start------------------- */
 
@@ -120,14 +133,30 @@ img {
 /* -------------------Media Query CSS------------------- */
 
 /* For small devices */
-@media (max-width:575.99px) {}
+@media (max-width:575.99px) {
+  .testamonial-content {
+    font-size: 14px;
+  }
+
+  .default-padding {
+    padding: 2rem 0;
+  }
+}
 
 /* For medium devices */
 @media (min-width:576px) and (max-width:991.98px) {
+  .default-padding {
+    padding: 3rem 0;
+  }
+
   .footer-section-img img {
-    bottom: 20%;
+    bottom: 50%;
   }
 }
 
 /* For Large devices */
-@media (min-width:992px) {}
+@media (min-width:992px) {
+  .testamonial-content {
+    max-width: 750px;
+  }
+}
