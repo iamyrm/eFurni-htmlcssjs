@@ -7,6 +7,7 @@
   --color-tertiary: #F9BF29;
   --color-primary-bg: #EFF2F1;
   --color-black: #2F2F2F;
+  --color-dark: #202020;
   --color-white: #fff;
   --color-lightgreen: #CBD5D1;
   --color-content: rgb(106, 106, 106);
@@ -55,6 +56,10 @@ img {
   color: var(--color-primary);
 }
 
+.hero-bg {
+  background-color: var(--color-primary);
+}
+
 .primary-bg {
   background-color: var(--color-primary-bg);
 }
@@ -100,15 +105,99 @@ img {
   transition-duration: 0.3s;
 }
 
-/* -------------------Main Content CSS Start------------------- */
+.site-button {
+  color: var(--color-white);
+  background-color: var(--color-black);
 
-.blog-posts {
-  margin-bottom: 5rem;
+  &:hover {
+    transition-duration: 0.3s;
+    background-color: var(--color-dark);
+  }
 }
 
-/* -------------------Main Content CSS End------------------- */
+.help-sec-prod-img {
+  background-color: var(--color-lightgreen);
+}
 
-/* -------------------Footer CSS Start------------------- */
+/* -------------------Main Content CSS Start------------------- */
+
+.hero-section-heading {
+  font-size: 54px;
+}
+
+.hero-button-1 {
+  color: var(--color-black);
+  background-color: var(--color-tertiary);
+}
+
+.hero-button-2 {
+  color: var(--color-white);
+  background-color: transparent;
+  border: 2px solid hsla(0, 0%, 100%, 0.5);
+
+  &:hover {
+    color: var(--color-white);
+    transition-duration: 0.3s;
+    border: 2px solid var(--color-white);
+  }
+}
+
+.craft-section-img {
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+}
+
+.craft-section-products {
+  cursor: pointer;
+
+  &:hover .craft-section-img {
+    transform: translateY(-10%);
+  }
+
+  &:hover .cross-icon-container {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:hover .cross-icon {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.cross-icon-container {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  padding: 10px;
+  align-items: center;
+  margin-bottom: -20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.cross-icon {
+  height: 25px;
+  width: 25px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.why-choose-icons {
+  height: 45px;
+  width: 45px;
+}
+
+.help-section li {
+  list-style-type: circle;
+}
+
+.blog-posts {
+  margin-bottom: 80px;
+}
 
 .input-form input {
   border: 0.5px solid var(--color-content);
@@ -128,35 +217,45 @@ img {
   bottom: -35%;
 }
 
-/* -------------------Footer CSS End------------------- */
 
 /* -------------------Media Query CSS------------------- */
 
-/* For small devices */
+/* For extra small devices */
 @media (max-width:575.99px) {
-  .testamonial-content {
-    font-size: 14px;
-  }
 
   .default-padding {
     padding: 2rem 0;
   }
+
+  .hero-section-heading {
+    font-size: 28px;
+  }
+
 }
 
-/* For medium devices */
-@media (min-width:576px) and (max-width:991.98px) {
+/* For Small devices */
+@media (min-width:576px) and (max-width:767.98px) {
   .default-padding {
     padding: 3rem 0;
   }
 
-  .footer-section-img img {
-    bottom: 50%;
+  .hero-section-heading {
+    font-size: 28px;
   }
 }
 
-/* For Large devices */
-@media (min-width:992px) {
-  .testamonial-content {
-    max-width: 750px;
+/* For Medium devices */
+@media (min-width:768px) and (max-width:991.98px) {
+  .hero-section-heading {
+    font-size: 42px;
   }
 }
+
+/* For Large */
+@media (min-width:992px) and (max-width:1199.98px) {}
+
+/* For Extra large */
+@media (min-width:1200px) and (max-width:1399.98px) {}
+
+/* Extra extra large devces */
+@media (min-width:1400px) {}
